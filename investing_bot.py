@@ -51,9 +51,8 @@ def investing_parser(ticker):
         resp =  'Investing.com doesnt contain current prices of {} asset. Please, use other source.'.format(ticker)
     return resp
 
-def main(token):  
-    print token
-    investing_bot = BotHandler(token)  
+def main():  
+    investing_bot = BotHandler('394461543:AAFG-QxI56h5guRboUMyrSeHXPRt551R2FA')  
     new_offset = None
 
     while True:
@@ -72,11 +71,8 @@ def main(token):
             new_offset = last_update_id + 1
 
 if __name__ == '__main__':  
-    import sys
 
-    print 'Number of arguments:', len(sys.argv), 'arguments.'
-    print 'Argument List:', str(sys.argv)
     try:
-        main(sys.argv[1])
+        main()
     except KeyboardInterrupt:
         exit()
