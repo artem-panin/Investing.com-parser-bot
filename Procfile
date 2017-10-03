@@ -1,1 +1,1 @@
-web: python investing_bot.py
+worker: python investing_bot.py
