@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import datetime
 
 class BotHandler:
 
@@ -46,7 +45,7 @@ def investing_parser(ticker):
         soup = BeautifulSoup(response.content, "html.parser")
         value = soup.find('input', {'class':'newInput inputTextBox alertValue'}).get('value')
         investing_price = round(float(value.replace(",", "")), 4)
-        resp =  '{} price: {} \n\nDownloaded from {} at {}'.format(ticker, investing_price, url_dict[ticker], datetime.datetime.today().strftime('%m/%d/%y %H:%M:%S'))
+        resp =  '{} price: {} \n\nDownloaded from {}'.format(ticker, investing_price, url_dict[ticker])
     except KeyError:
         resp =  'Investing.com doesnt contain current prices of {} asset. Please, use other source.'.format(ticker)
     return resp
