@@ -75,7 +75,9 @@ def investing_parser(ticker):
             'EWU' : 'https://www.investing.com/etfs/ishares-msci-uk',
             'EURGBP' : 'https://www.investing.com/currencies/eur-gbp',
             'GBPUSD' : 'https://www.investing.com/currencies/gbp-usd',
-            'XME' : 'https://www.investing.com/etfs/spdr-s-p-metals---mining'}
+            'XME' : 'https://www.investing.com/etfs/spdr-s-p-metals---mining',
+            'PL1' :  'https://www.investing.com/commodities/platinum',
+            'HG1' : 'https://www.investing.com/commodities/copper'}
 
     try:
         response = requests.get(url_dict[ticker], headers={"user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (K HTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"})
