@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import time
 
 class BotHandler:
 
@@ -107,6 +108,7 @@ def main():
             investing_bot.send_message(last_chat_id, '{}, \n\n{}'.format(last_chat_name, response))
 
             new_offset = last_update_id + 1
+        time.sleep(1)
 
 if __name__ == '__main__':  
 
