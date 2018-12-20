@@ -1,1 +1,1 @@
-# investing_bot
+# Investing.com Telegram bot
